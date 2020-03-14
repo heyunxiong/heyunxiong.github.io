@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://volantis.js.org/#2.1.4'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+    <title>[SpringBoot] Hello World! - Yunxiong He</title>
+  
+    <meta name="keywords" content="SpringBoot">
+  
+  
+    <meta name="description" content="
+别人的博客是别人的，别人的文章是别人的，别人的总结是别人的，我写的才是我的，不是你的！
+
+看了这么多SpringBoot的HelloWorld，其实每次看都要根据博主的思路梳理一次，实在是有点浪费时间；干脆以自己动手弄一份好了，以后查回忆起来比较快！算是guide也好，算是什么都行，只管动手，本文没有涉及什么内...">
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Yunxiong He">
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css">
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+
+  
+
+  
+  <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico">
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.1.4.3/css/style.css">
+
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+</head>
+
+<body>
+  
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+<header class="l_header shadow blur">
+
+  <div class='wrapper'>
+    <div class='nav-sub container--flex'>
+      <a class="logo flat-box"></a>
+      <ul class='switcher h-list'>
+        <li><a class="s-comment flat-btn fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc flat-btn fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main container container--flex">
+      
+        
+        <a class="logo flat-box" target="_self" href='/'>
+          
+          
+          
+            Yunxiong
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='h-list'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  
+                    <i class='fas fa-rss fa-fw'></i>
+                  
+                  博客
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  
+                    <i class='fas fa-folder-open fa-fw'></i>
+                  
+                  分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  
+                    <i class='fas fa-tags fa-fw'></i>
+                  
+                  标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  
+                    <i class='fas fa-archive fa-fw'></i>
+                  
+                  归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  
+                    <i class='fas fa-info-circle fa-fw'></i>
+                  
+                  关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      
+        <div class="m_search">
+          <form name="searchform" class="form u-search-form">
+            <i class="icon fas fa-search fa-fw"></i>
+            <input type="text" class="input u-search-input" placeholder="搜索" />
+          </form>
+        </div>
+      
+
+			<ul class='switcher h-list'>
+				
+					<li><a class="s-search flat-btn fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li><a class="s-menu flat-btn fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<ul class="menu-phone navigation white-box">
+  
+  
+    <li>
+      <a class="flat-box" href=/
+        
+        
+        
+          id="home"
+        >
+        
+          <i class='fas fa-rss fa-fw'></i>
+        
+        博客
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/categories/
+        
+        
+        
+          id="categories"
+        >
+        
+          <i class='fas fa-folder-open fa-fw'></i>
+        
+        分类
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/tags/
+        
+        
+        
+          id="tags"
+        >
+        
+          <i class='fas fa-tags fa-fw'></i>
+        
+        标签
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/archives/
+        
+        
+        
+          id="archives"
+        >
+        
+          <i class='fas fa-archive fa-fw'></i>
+        
+        归档
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/about/
+        
+        
+        
+          id="about"
+        >
+        
+          <i class='fas fa-info-circle fa-fw'></i>
+        
+        关于
+      </a>
+    </li>
+  
+</ul>
+<script>setLoadingBarProgress(40);</script>
+
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper'>
+      
+
+<div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box shadow article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  
+    <h1 class="title">
+      <a href="/2019/07/13/SpringBoot-Hello-World/">
+        [SpringBoot] Hello World!
+      </a>
+    </h1>
+  
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+<div class='new-meta-item author'>
+  <a href="https://blog.heyunxiong.com" target="_blank" rel="nofollow noopener">
+    <img src="http://q6vuh5f4h.bkt.clouddn.com/picgo/windows/个人/0.jpg">
+    <p>Yunxiong</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/%E6%8A%80%E6%9C%AF/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>技术</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-edit" aria-hidden="true"></i>
+    <p>发布于：Jul 13, 2019</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          <blockquote>
+<p>别人的博客是别人的，别人的文章是别人的，别人的总结是别人的，我写的才是我的，不是你的！</p>
+</blockquote>
+<p>看了这么多SpringBoot的HelloWorld，其实每次看都要根据博主的思路梳理一次，实在是有点浪费时间；干脆以自己动手弄一份好了，以后查回忆起来比较快！算是guide也好，算是什么都行，只管动手，本文没有涉及什么内容上的讲解，就是操作！</p>
+<a id="more"></a>
+
+<h2 id="创建项目过程"><a href="#创建项目过程" class="headerlink" title="创建项目过程"></a>创建项目过程</h2><h3 id="创建新项目"><a href="#创建新项目" class="headerlink" title="创建新项目"></a>创建新项目</h3><p> 打开IDEA，创建一个新的项目</p>
+<p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/1.png" alt="1"></p>
+<h3 id="选择Spring-Initializr"><a href="#选择Spring-Initializr" class="headerlink" title="选择Spring Initializr"></a>选择Spring Initializr</h3><p>如果IDEA版本是高级版本，会有Spring Initializr的功能模块选项；社区版的没有，不过也可以创建Maven工程，然后把下面的POM文件的关键信息粘贴上去</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/POM/4.0.0"</span> <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.1.6.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">relativePath</span>/&gt;</span> <span class="comment">&lt;!-- lookup parent from repository --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.sean<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springbootdemo<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.0.1-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>springbootdemo<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">description</span>&gt;</span>Demo project for Spring Boot By Sean<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>12<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-test<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="选择SDK的版本"><a href="#选择SDK的版本" class="headerlink" title="选择SDK的版本"></a>选择SDK的版本</h3><p>这里用了最新的12，目前8的使用率应该是最广的。</p>
+<p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/2.png" alt="2"></p>
+<h3 id="填写项目信息"><a href="#填写项目信息" class="headerlink" title="填写项目信息"></a>填写项目信息</h3><p>填好项目的坐标（Group，Artifact），注意选择匹配的 Java Version</p>
+<p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/3.png" alt="3"></p>
+<h3 id="选择起步依赖"><a href="#选择起步依赖" class="headerlink" title="选择起步依赖"></a>选择起步依赖</h3><p>Spring Initializr的作用就是可以这样定制地选择自己要依赖的功能，这里为了简单起见，就选择一个web起步依赖。</p>
+<p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/4.png" alt="4"></p>
+<h3 id="填写好项目名称"><a href="#填写好项目名称" class="headerlink" title="填写好项目名称"></a>填写好项目名称</h3><p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/5.png" alt="5"></p>
+<h3 id="进度条信息"><a href="#进度条信息" class="headerlink" title="进度条信息"></a>进度条信息</h3><p>点击完成的时候，IDEA就会帮我们去下载那些依赖jar包，注意IDEA右下角的这些进程条</p>
+<p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/6.png" alt="6"></p>
+<h2 id="项目结构讲解"><a href="#项目结构讲解" class="headerlink" title="项目结构讲解"></a>项目结构讲解</h2><h3 id="项目初始结构"><a href="#项目初始结构" class="headerlink" title="项目初始结构"></a>项目初始结构</h3><p>项目的初始目录结构，其中里面的（mvnw,mvnw.cmd,Help.md）这几个是IDEA生成的文件，可以删除，不影响项目。</p>
+<p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/7.png" alt="7"></p>
+<h3 id="POM-xml文件"><a href="#POM-xml文件" class="headerlink" title="POM.xml文件"></a>POM.xml文件</h3><p>pom文件里面有spring-boot-starter-web这个起步依赖，这个就是我们开始创建项目过程中选择的web起步依赖，而spring-boot-starter-test是IDEA会默认帮我们带上的，还有一个父依赖，显示当前的使用的springboot版本</p>
+<p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/8.png" alt="8"></p>
+<h3 id="主程序入口文件"><a href="#主程序入口文件" class="headerlink" title="主程序入口文件"></a>主程序入口文件</h3><p>会自动的生成一个后缀是×××Application.java的文件，通过@SpringBootApplication表明 该类是入口程序</p>
+<p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/9.png" alt="9"></p>
+<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p>配置文件初始时是空的，以后有需要自己配置的信息，可以在这里覆盖掉默认配置。</p>
+<p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/10.png" alt="10"></p>
+<h3 id="测试类入口文件"><a href="#测试类入口文件" class="headerlink" title="测试类入口文件"></a>测试类入口文件</h3><p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/11.png" alt="11"></p>
+<p>项目的创建和项目的结构介绍就差不多了（其实是知识储备不足了），接下来开始快速的写一个Hello World</p>
+<h2 id="My-Getting-Started"><a href="#My-Getting-Started" class="headerlink" title="My Getting Started"></a>My Getting Started</h2><h3 id="编写Controller"><a href="#编写Controller" class="headerlink" title="编写Controller"></a>编写Controller</h3><p>创建一个Controller类，用来控制转发请求。</p>
+<p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/11.png" alt="12"></p>
+<h3 id="启动SpringBoot"><a href="#启动SpringBoot" class="headerlink" title="启动SpringBoot"></a>启动SpringBoot</h3><p>注意访问的端口号，一般默认是8080，因为内置的是Tomcat。</p>
+<p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/13.png" alt="13"></p>
+<h3 id="浏览器访问"><a href="#浏览器访问" class="headerlink" title="浏览器访问"></a>浏览器访问</h3><p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/14.png" alt="14"></p>
+<p>好了，这就是springboot的helloworld了。</p>
+<hr>
+<h2 id="自定义Banner"><a href="#自定义Banner" class="headerlink" title="自定义Banner"></a>自定义Banner</h2><p>在resources里面创建Banner.txt，然后复制一个神兽！</p>
+<p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/15.png" alt="15"></p>
+<p>重新启动即可。</p>
+<p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/16.png" alt="16"></p>
+
+          
+            <br>
+            
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
+  <div class='content'>
+    
+      <blockquote>
+        
+          
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+          
+        
+          
+            <p>本文永久链接是： <a href=http://yoursite.com/2019/07/13/SpringBoot-Hello-World/>http://yoursite.com/2019/07/13/SpringBoot-Hello-World/</a></p>
+          
+        
+      </blockquote>
+    
+  </div>
+</section>
+
+  
+
+
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-03-14T14:04:06+08:00">
+  <a class='notlink'>
+    <i class="fas fa-save" aria-hidden="true"></i>
+    <p>更新于：Mar 14, 2020</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SpringBoot/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i><p>SpringBoot</p></a></div>
+
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/07/13/SpringBoot-Hello-World/&title=[SpringBoot] Hello World! - Yunxiong He&summary=
+别人的博客是别人的，别人的文章是别人的，别人的总结是别人的，我写的才是我的，不是你的！
+
+看了这么多SpringBoot的HelloWorld，其实每次看都要根据博主的思路梳理一次，实在是有点浪费时间；干脆以自己动手弄一份好了，以后查回忆起来比较快！算是guide也好，算是什么都行，只管动手，本文没有涉及什么内容上的讲解，就是操作！"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2019/07/13/SpringBoot-Hello-World/&title=[SpringBoot] Hello World! - Yunxiong He&summary=
+别人的博客是别人的，别人的文章是别人的，别人的总结是别人的，我写的才是我的，不是你的！
+
+看了这么多SpringBoot的HelloWorld，其实每次看都要根据博主的思路梳理一次，实在是有点浪费时间；干脆以自己动手弄一份好了，以后查回忆起来比较快！算是guide也好，算是什么都行，只管动手，本文没有涉及什么内容上的讲解，就是操作！"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/07/13/SpringBoot-Hello-World/&title=[SpringBoot] Hello World! - Yunxiong He&summary=
+别人的博客是别人的，别人的文章是别人的，别人的总结是别人的，我写的才是我的，不是你的！
+
+看了这么多SpringBoot的HelloWorld，其实每次看都要根据博主的思路梳理一次，实在是有点浪费时间；干脆以自己动手弄一份好了，以后查回忆起来比较快！算是guide也好，算是什么都行，只管动手，本文没有涉及什么内容上的讲解，就是操作！"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+            
+              <a class='next' href='/2019/04/17/Hexo-GitHub%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/'>
+                <p class='title'>Hexo+GitHub博客搭建<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>即使没有自己买服务器去搭建， 可以借助GitHub Page免费托管功能，也可以实现静态博客的搭建！
+
+
+安装Gitgit的安装, 只要被配置好自己的账号即可！
+12$ git config -...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: '[SpringBoot] Hello World!',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+  <section class="widget toc-wrapper shadow desktop mobile">
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#创建项目过程"><span class="toc-text">创建项目过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建新项目"><span class="toc-text">创建新项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选择Spring-Initializr"><span class="toc-text">选择Spring Initializr</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选择SDK的版本"><span class="toc-text">选择SDK的版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#填写项目信息"><span class="toc-text">填写项目信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选择起步依赖"><span class="toc-text">选择起步依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#填写好项目名称"><span class="toc-text">填写好项目名称</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进度条信息"><span class="toc-text">进度条信息</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目结构讲解"><span class="toc-text">项目结构讲解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#项目初始结构"><span class="toc-text">项目初始结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#POM-xml文件"><span class="toc-text">POM.xml文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主程序入口文件"><span class="toc-text">主程序入口文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置文件"><span class="toc-text">配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测试类入口文件"><span class="toc-text">测试类入口文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#My-Getting-Started"><span class="toc-text">My Getting Started</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#编写Controller"><span class="toc-text">编写Controller</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动SpringBoot"><span class="toc-text">启动SpringBoot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#浏览器访问"><span class="toc-text">浏览器访问</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义Banner"><span class="toc-text">自定义Banner</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+  
+  <footer class="clearfix ">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      autoplay='false'
+      volume='0.7'
+      loop='all'
+      order='list'
+      fixed='false'
+      list-max-height='340px'
+      server='netease'
+      type='playlist'
+      id='2466129122'
+      list-folded='true'>
+    </meting-js>
+  
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="/atom.xml"
+                class="social fas fa-rss flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="mailto:hyxsean@gmail.com"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://github.com/#"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://music.163.com/#"
+                class="social fas fa-headphones-alt flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+        </div>
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://blog.heyunxiong.com" target="_blank" rel="noopener">Copyright © 2019-2020 Yunxiong He</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4/dist/jquery.min.js"></script>
+
+
+  <script>
+    
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        var imgs=["https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/B18FCBB3-67FD-48CC-B4F3-457BA145F17A.jpeg"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+        if ('.cover') {
+          $('.cover').backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        } else {
+          $.backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js" async></script>
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js" async></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.1.4/js/app.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.1/js/search.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/comment_typing.js"></script>
+
+
+
+<!-- 复制 -->
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copyed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-clipboard-check');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPYED';
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-exclamation-triangle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+
+
+<!-- fancybox -->
+
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>
