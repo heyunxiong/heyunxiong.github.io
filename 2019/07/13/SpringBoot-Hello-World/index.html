@@ -18,13 +18,12 @@
   
     <title>[SpringBoot] Hello World! - Yunxiong He</title>
   
-    <meta name="keywords" content="SpringBoot">
+    <meta name="keywords" content="SpringBoot,demo">
   
   
     <meta name="description" content="
-别人的博客是别人的，别人的文章是别人的，别人的总结是别人的，我写的才是我的，不是你的！
-
-看了这么多SpringBoot的HelloWorld，其实每次看都要根据博主的思路梳理一次，实在是有点浪费时间；干脆以自己动手弄一份好了，以后查回忆起来比较快！算是guide也好，算是什么都行，只管动手，本文没有涉及什么内...">
+看了这么多SpringBoot的HelloWorld，其实每次看都要根据博主的思路梳理一次，实在是有点浪费时间；干脆就自己动手弄一份好了，以后查回忆起来比较快！
+">
   
 
   <!-- feed -->
@@ -212,7 +211,7 @@
         <div class="m_search">
           <form name="searchform" class="form u-search-form">
             <i class="icon fas fa-search fa-fw"></i>
-            <input type="text" class="input u-search-input" placeholder="搜索" />
+            <input type="text" class="input u-search-input" placeholder="Find more ..." />
           </form>
         </div>
       
@@ -339,8 +338,8 @@
           
             
 <div class='new-meta-item author'>
-  <a href="https://blog.heyunxiong.com" rel="nofollow">
-    <img src="http://q6vuh5f4h.bkt.clouddn.com/picgo/windows/个人/0.jpg">
+  <a href="https://heyunxiong.com" rel="nofollow">
+    <img src="https://qn.heyunxiong.com/binzhang.jpg">
     <p>Yunxiong</p>
   </a>
 </div>
@@ -351,9 +350,9 @@
             
   
   <div class='new-meta-item category'>
-    <a href='/categories/%E6%8A%80%E6%9C%AF/' rel="nofollow">
+    <a href='/categories/SpringBoot/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>技术</p>
+      <p>SpringBoot</p>
     </a>
   </div>
 
@@ -387,48 +386,51 @@
         <div class="article-entry" itemprop="articleBody">
           
           <blockquote>
-<p>别人的博客是别人的，别人的文章是别人的，别人的总结是别人的，我写的才是我的，不是你的！</p>
+<p>看了这么多SpringBoot的HelloWorld，其实每次看都要根据博主的思路梳理一次，实在是有点浪费时间；干脆就自己动手弄一份好了，以后查回忆起来比较快！</p>
 </blockquote>
-<p>看了这么多SpringBoot的HelloWorld，其实每次看都要根据博主的思路梳理一次，实在是有点浪费时间；干脆以自己动手弄一份好了，以后查回忆起来比较快！算是guide也好，算是什么都行，只管动手，本文没有涉及什么内容上的讲解，就是操作！</p>
 <a id="more"></a>
 
 <h2 id="创建项目过程"><a href="#创建项目过程" class="headerlink" title="创建项目过程"></a>创建项目过程</h2><h3 id="创建新项目"><a href="#创建新项目" class="headerlink" title="创建新项目"></a>创建新项目</h3><p> 打开IDEA，创建一个新的项目</p>
-<p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/1.png" alt="1"></p>
+<p><fancybox><img src="https://qn.heyunxiong.com/springboot/helloworld/1.png" alt="1"></fancybox></p>
 <h3 id="选择Spring-Initializr"><a href="#选择Spring-Initializr" class="headerlink" title="选择Spring Initializr"></a>选择Spring Initializr</h3><p>如果IDEA版本是高级版本，会有Spring Initializr的功能模块选项；社区版的没有，不过也可以创建Maven工程，然后把下面的POM文件的关键信息粘贴上去</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/POM/4.0.0"</span> <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.1.6.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">relativePath</span>/&gt;</span> <span class="comment">&lt;!-- lookup parent from repository --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.sean<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springbootdemo<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.0.1-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>springbootdemo<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">description</span>&gt;</span>Demo project for Spring Boot By Sean<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>12<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-test<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
 <h3 id="选择SDK的版本"><a href="#选择SDK的版本" class="headerlink" title="选择SDK的版本"></a>选择SDK的版本</h3><p>这里用了最新的12，目前8的使用率应该是最广的。</p>
-<p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/2.png" alt="2"></p>
+<p><fancybox><img src="https://qn.heyunxiong.com/springboot/helloworld/2.png" alt="2"></fancybox></p>
 <h3 id="填写项目信息"><a href="#填写项目信息" class="headerlink" title="填写项目信息"></a>填写项目信息</h3><p>填好项目的坐标（Group，Artifact），注意选择匹配的 Java Version</p>
-<p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/3.png" alt="3"></p>
+<p><fancybox><img src="https://qn.heyunxiong.com/springboot/helloworld/3.png" alt="3"></fancybox></p>
 <h3 id="选择起步依赖"><a href="#选择起步依赖" class="headerlink" title="选择起步依赖"></a>选择起步依赖</h3><p>Spring Initializr的作用就是可以这样定制地选择自己要依赖的功能，这里为了简单起见，就选择一个web起步依赖。</p>
-<p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/4.png" alt="4"></p>
-<h3 id="填写好项目名称"><a href="#填写好项目名称" class="headerlink" title="填写好项目名称"></a>填写好项目名称</h3><p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/5.png" alt="5"></p>
+<p><fancybox><img src="https://qn.heyunxiong.com/springboot/helloworld/4.png" alt="4"></fancybox></p>
+<h3 id="填写好项目名称"><a href="#填写好项目名称" class="headerlink" title="填写好项目名称"></a>填写好项目名称</h3><p><fancybox><img src="https://qn.heyunxiong.com/springboot/helloworld/5.png" alt="5"></fancybox></p>
 <h3 id="进度条信息"><a href="#进度条信息" class="headerlink" title="进度条信息"></a>进度条信息</h3><p>点击完成的时候，IDEA就会帮我们去下载那些依赖jar包，注意IDEA右下角的这些进程条</p>
-<p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/6.png" alt="6"></p>
+<p><fancybox><img src="https://qn.heyunxiong.com/springboot/helloworld/6.png" alt="6"></fancybox></p>
 <h2 id="项目结构讲解"><a href="#项目结构讲解" class="headerlink" title="项目结构讲解"></a>项目结构讲解</h2><h3 id="项目初始结构"><a href="#项目初始结构" class="headerlink" title="项目初始结构"></a>项目初始结构</h3><p>项目的初始目录结构，其中里面的（mvnw,mvnw.cmd,Help.md）这几个是IDEA生成的文件，可以删除，不影响项目。</p>
-<p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/7.png" alt="7"></p>
+<fancybox>
+
+<p><img src="https://qn.heyunxiong.com/springboot/helloworld/7.png" alt="7"></p>
+</fancybox>
+
 <h3 id="POM-xml文件"><a href="#POM-xml文件" class="headerlink" title="POM.xml文件"></a>POM.xml文件</h3><p>pom文件里面有spring-boot-starter-web这个起步依赖，这个就是我们开始创建项目过程中选择的web起步依赖，而spring-boot-starter-test是IDEA会默认帮我们带上的，还有一个父依赖，显示当前的使用的springboot版本</p>
-<p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/8.png" alt="8"></p>
+<p><fancybox><img src="https://qn.heyunxiong.com/springboot/helloworld/8.png" alt="8"></fancybox></p>
 <h3 id="主程序入口文件"><a href="#主程序入口文件" class="headerlink" title="主程序入口文件"></a>主程序入口文件</h3><p>会自动的生成一个后缀是×××Application.java的文件，通过@SpringBootApplication表明 该类是入口程序</p>
-<p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/9.png" alt="9"></p>
+<p><fancybox><img src="https://qn.heyunxiong.com/springboot/helloworld/9.png" alt="9"></fancybox></p>
 <h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p>配置文件初始时是空的，以后有需要自己配置的信息，可以在这里覆盖掉默认配置。</p>
-<p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/10.png" alt="10"></p>
-<h3 id="测试类入口文件"><a href="#测试类入口文件" class="headerlink" title="测试类入口文件"></a>测试类入口文件</h3><p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/11.png" alt="11"></p>
+<p><fancybox><img src="https://qn.heyunxiong.com/springboot/helloworld/10.png" alt="10"></fancybox></p>
+<h3 id="测试类入口文件"><a href="#测试类入口文件" class="headerlink" title="测试类入口文件"></a>测试类入口文件</h3><p><fancybox><img src="https://qn.heyunxiong.com/springboot/helloworld/11.png" alt="11"></fancybox></p>
 <p>项目的创建和项目的结构介绍就差不多了（其实是知识储备不足了），接下来开始快速的写一个Hello World</p>
 <h2 id="My-Getting-Started"><a href="#My-Getting-Started" class="headerlink" title="My Getting Started"></a>My Getting Started</h2><h3 id="编写Controller"><a href="#编写Controller" class="headerlink" title="编写Controller"></a>编写Controller</h3><p>创建一个Controller类，用来控制转发请求。</p>
-<p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/11.png" alt="12"></p>
+<p><fancybox><img src="https://qn.heyunxiong.com/springboot/helloworld/12.png" alt="12"></fancybox></p>
 <h3 id="启动SpringBoot"><a href="#启动SpringBoot" class="headerlink" title="启动SpringBoot"></a>启动SpringBoot</h3><p>注意访问的端口号，一般默认是8080，因为内置的是Tomcat。</p>
-<p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/13.png" alt="13"></p>
-<h3 id="浏览器访问"><a href="#浏览器访问" class="headerlink" title="浏览器访问"></a>浏览器访问</h3><p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/14.png" alt="14"></p>
+<p><fancybox><img src="https://qn.heyunxiong.com/springboot/helloworld/13.png" alt="13"></fancybox></p>
+<h3 id="浏览器访问"><a href="#浏览器访问" class="headerlink" title="浏览器访问"></a>浏览器访问</h3><p><fancybox><img src="https://qn.heyunxiong.com/springboot/helloworld/14.png" alt="14"></fancybox></p>
 <p>好了，这就是springboot的helloworld了。</p>
 <hr>
 <h2 id="自定义Banner"><a href="#自定义Banner" class="headerlink" title="自定义Banner"></a>自定义Banner</h2><p>在resources里面创建Banner.txt，然后复制一个神兽！</p>
-<p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/15.png" alt="15"></p>
+<p><fancybox><img src="https://qn.heyunxiong.com/springboot/helloworld/15.png" alt="15"></fancybox></p>
 <p>重新启动即可。</p>
-<p><img src="http://q6vuh5f4h.bkt.clouddn.com/springboot/helloworld/16.png" alt="16"></p>
+<p><fancybox><img src="https://qn.heyunxiong.com/springboot/helloworld/16.png" alt="16"></fancybox></p>
 
           
             <br>
@@ -448,7 +450,7 @@
           
         
           
-            <p>本文永久链接是： <a href=http://blog.heyunxiong.com/2019/07/13/SpringBoot-Hello-World/>http://blog.heyunxiong.com/2019/07/13/SpringBoot-Hello-World/</a></p>
+            <p>本文永久链接是： <a href=https://heyunxiong.com/2019/07/13/SpringBoot-Hello-World/>https://heyunxiong.com/2019/07/13/SpringBoot-Hello-World/</a></p>
           
         
       </blockquote>
@@ -469,10 +471,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-03-14T14:04:06+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-04-22T21:25:34+08:00">
   <a class='notlink'>
     <i class="fas fa-save" aria-hidden="true"></i>
-    <p>更新于：Mar 14, 2020</p>
+    <p>更新于：Apr 22, 2020</p>
   </a>
 </div>
 
@@ -481,7 +483,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SpringBoot/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i><p>SpringBoot</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SpringBoot/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i><p>SpringBoot</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/demo/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i><p>demo</p></a></div>
 
 
         
@@ -499,10 +501,9 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.heyunxiong.com/2019/07/13/SpringBoot-Hello-World/&title=[SpringBoot] Hello World! - Yunxiong He&summary=
-别人的博客是别人的，别人的文章是别人的，别人的总结是别人的，我写的才是我的，不是你的！
-
-看了这么多SpringBoot的HelloWorld，其实每次看都要根据博主的思路梳理一次，实在是有点浪费时间；干脆以自己动手弄一份好了，以后查回忆起来比较快！算是guide也好，算是什么都行，只管动手，本文没有涉及什么内容上的讲解，就是操作！"
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://heyunxiong.com/2019/07/13/SpringBoot-Hello-World/&title=[SpringBoot] Hello World! - Yunxiong He&summary=
+看了这么多SpringBoot的HelloWorld，其实每次看都要根据博主的思路梳理一次，实在是有点浪费时间；干脆就自己动手弄一份好了，以后查回忆起来比较快！
+"
           
           >
           
@@ -514,10 +515,9 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.heyunxiong.com/2019/07/13/SpringBoot-Hello-World/&title=[SpringBoot] Hello World! - Yunxiong He&summary=
-别人的博客是别人的，别人的文章是别人的，别人的总结是别人的，我写的才是我的，不是你的！
-
-看了这么多SpringBoot的HelloWorld，其实每次看都要根据博主的思路梳理一次，实在是有点浪费时间；干脆以自己动手弄一份好了，以后查回忆起来比较快！算是guide也好，算是什么都行，只管动手，本文没有涉及什么内容上的讲解，就是操作！"
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://heyunxiong.com/2019/07/13/SpringBoot-Hello-World/&title=[SpringBoot] Hello World! - Yunxiong He&summary=
+看了这么多SpringBoot的HelloWorld，其实每次看都要根据博主的思路梳理一次，实在是有点浪费时间；干脆就自己动手弄一份好了，以后查回忆起来比较快！
+"
           
           >
           
@@ -529,10 +529,9 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=http://blog.heyunxiong.com/2019/07/13/SpringBoot-Hello-World/&title=[SpringBoot] Hello World! - Yunxiong He&summary=
-别人的博客是别人的，别人的文章是别人的，别人的总结是别人的，我写的才是我的，不是你的！
-
-看了这么多SpringBoot的HelloWorld，其实每次看都要根据博主的思路梳理一次，实在是有点浪费时间；干脆以自己动手弄一份好了，以后查回忆起来比较快！算是guide也好，算是什么都行，只管动手，本文没有涉及什么内容上的讲解，就是操作！"
+          href="http://service.weibo.com/share/share.php?url=https://heyunxiong.com/2019/07/13/SpringBoot-Hello-World/&title=[SpringBoot] Hello World! - Yunxiong He&summary=
+看了这么多SpringBoot的HelloWorld，其实每次看都要根据博主的思路梳理一次，实在是有点浪费时间；干脆就自己动手弄一份好了，以后查回忆起来比较快！
+"
           
           >
           
@@ -555,6 +554,19 @@
         
         
           <div class="prev-next">
+            
+              <a class='prev' href='/2020/04/22/VMware%E5%A4%9A%E8%8A%82%E7%82%B9%E9%9D%99%E6%80%81%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>VMware多节点静态网络配置</p>
+                <p class='content'>
+基于VMware虚拟机搭建多节点环境，给自己学习弄一个多节点的环境
+
+
+
+VMware多节点静态网络配置前提准备：
+VMware虚拟机
+
+CentOS7 ISO 文件 下载地址，下载DVD标准...</p>
+              </a>
             
             
               <a class='next' href='/2019/04/17/Hexo-GitHub%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/'>
@@ -638,7 +650,7 @@
     <meting-js
       theme='#1BCDFC'
       autoplay='false'
-      volume='0.7'
+      volume='0.5'
       loop='one'
       order='list'
       fixed='false'
@@ -695,7 +707,7 @@
     
       
         <div class='copyright'>
-        <p><a href="https://blog.heyunxiong.com">Copyright © 2019-2020 Yunxiong He</a></p>
+        <p>粤ICP备20017625号<br><a href="https://heyunxiong.com">Copyright © 2019-2020 Yunxiong He</a></p>
 
         </div>
       
@@ -703,7 +715,6 @@
   </footer>
 
 <script>setLoadingBarProgress(80);</script>
-
 
       <script>setLoadingBarProgress(60);</script>
     </div>

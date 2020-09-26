@@ -16,12 +16,14 @@
 
   <!-- 页面元数据 -->
   
-    <title>Hexo+GitHub博客搭建 - Yunxiong He</title>
+    <title>VMware多节点静态网络配置 - Yunxiong He</title>
   
-    <meta name="keywords" content="博客">
+    <meta name="keywords" content="虚拟机,多节点">
   
   
-    <meta name="description" content="即使没有自己买服务器去搭建， 可以借助GitHub Page免费托管功能，也可以实现静态博客的搭建！">
+    <meta name="description" content="
+基于VMware虚拟机搭建多节点环境，给自己学习弄一个多节点的环境
+">
   
 
   <!-- feed -->
@@ -321,8 +323,8 @@
         
   
     <h1 class="title">
-      <a href="/2019/04/17/Hexo-GitHub%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
-        Hexo+GitHub博客搭建
+      <a href="/2020/04/22/VMware%E5%A4%9A%E8%8A%82%E7%82%B9%E9%9D%99%E6%80%81%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/">
+        VMware多节点静态网络配置
       </a>
     </h1>
   
@@ -348,9 +350,9 @@
             
   
   <div class='new-meta-item category'>
-    <a href='/categories/%E6%8A%80%E6%9C%AF/' rel="nofollow">
+    <a href='/categories/Linux/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>技术</p>
+      <p>Linux</p>
     </a>
   </div>
 
@@ -361,7 +363,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>发布于：Apr 17, 2019</p>
+    <p>发布于：Apr 22, 2020</p>
   </a>
 </div>
 
@@ -383,58 +385,85 @@
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
           
-          <p>即使没有自己买服务器去搭建， 可以借助GitHub Page免费托管功能，也可以实现静态博客的搭建！</p>
+          <blockquote>
+<p>基于VMware虚拟机搭建多节点环境，给自己学习弄一个多节点的环境</p>
+</blockquote>
 <a id="more"></a>
 
-<h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p>git的安装, 只要被配置好自己的账号即可！</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;yourname&quot;</span><br><span class="line">$ git config --global user.email yourname@gmail.com</span><br></pre></td></tr></table></figure>
-
-<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>从官网下载，直接安装就好 <a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a></p>
-<p>查看是否看安装成功，会显示版本信息</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>按照官网的步骤： <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">https://hexo.io/zh-cn/</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="代码版本控制平台"><a href="#代码版本控制平台" class="headerlink" title="代码版本控制平台"></a>代码版本控制平台</h3><ul>
-<li><p>国内：Gitee码云，Coding</p>
+<h1 id="VMware多节点静态网络配置"><a href="#VMware多节点静态网络配置" class="headerlink" title="VMware多节点静态网络配置"></a>VMware多节点静态网络配置</h1><h2 id="前提准备："><a href="#前提准备：" class="headerlink" title="前提准备："></a>前提准备：</h2><ul>
+<li><p>VMware虚拟机</p>
 </li>
-<li><p>国外：GitHub</p>
-<p>  在GitHub创建对应的仓库，GitHub的必须要用 “用户名.github.io” 给仓库起名字。</p>
-<p>  例如：yourname.github.io</p>
+<li><p>CentOS7 ISO 文件 <a href="http://mirrors.aliyun.com/centos/7/isos/x86_64/" target="_blank" rel="noopener">下载地址</a>，下载DVD标准版即可</p>
 </li>
 </ul>
-<h3 id="推送到远程github仓库配置"><a href="#推送到远程github仓库配置" class="headerlink" title="推送到远程github仓库配置"></a>推送到远程github仓库配置</h3><p>在hexo的blog目录下找到 blog/_config.yml</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:&#x2F;&#x2F;github.com&#x2F;yourname&#x2F;yourname.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="购买域名-可选"><a href="#购买域名-可选" class="headerlink" title="购买域名(可选)"></a>购买域名(可选)</h3><p>推荐购买域名服务提供商：</p>
+<h2 id="安装软件，创建虚拟机"><a href="#安装软件，创建虚拟机" class="headerlink" title="安装软件，创建虚拟机"></a>安装软件，创建虚拟机</h2><ul>
+<li>安装VMware， 略过</li>
+<li>创建新的虚拟机，导入ISO，要注意的就是分配CPU和内存，这些都基于自宿主机的配置，一般1-2g内存够用了。</li>
+</ul>
+<h2 id="修改VMware网络连接模式"><a href="#修改VMware网络连接模式" class="headerlink" title="修改VMware网络连接模式"></a>修改VMware网络连接模式</h2><p>新创建好的虚拟机暂时无法进行通信，需要手动配置才能实现和宿主机，外网和其他虚拟机进行网络连接。</p>
 <ul>
-<li>国内：阿里旗下的<a href="https://wanwang.aliyun.com/" target="_blank" rel="noopener">万网</a></li>
-<li>国外 ：<a href="http://www.namesilo.com>" target="_blank" rel="noopener">namesilo</a>  <a href="https://www.godaddy.com/" target="_blank" rel="noopener">godaddy</a></li>
+<li>尝试ping宿主机地址和外网</li>
 </ul>
-<h3 id="关联购买的域名"><a href="#关联购买的域名" class="headerlink" title="关联购买的域名"></a>关联购买的域名</h3><ul>
-<li><p>创建CNAME文件</p>
+<p><fancybox><img src="https://qn.heyunxiong.com//blog/vmware/image-20200422002817464.png" alt="image-20200422002817464"></fancybox></p>
+<p>我们可以通过VMware的桥接模式设置一下连接方式。关于虚拟机的各种网络连接模式，<a href="https://www.cnblogs.com/wushuaishuai/p/9258849.html" target="_blank" rel="noopener">参考地址</a></p>
+<p><fancybox><img src="https://qn.heyunxiong.com//blog/vmware/image-20200422003007551.png" alt="image-20200422003007551"></fancybox></p>
+<h2 id="动态分配地址"><a href="#动态分配地址" class="headerlink" title="动态分配地址"></a>动态分配地址</h2><p>新创建的虚拟机目前还没有分配IP地址，需要动态获取！</p>
+<p><fancybox><img src="https://qn.heyunxiong.com//blog/vmware/image-20200422002708188.png" alt="image-20200422002708188"></fancybox></p>
+<p>使用dhclient 自动分配一个地址, dhclient命令使用动态主机配置协议动态的配置网络接口的网络参数。<a href="https://man.linuxde.net/dhclient" target="_blank" rel="noopener">dhclient详细介绍</a></p>
+<p><fancybox><img src="https://qn.heyunxiong.com//blog/vmware/image-20200422003144675.png" alt="image-20200422003144675"></fancybox></p>
+<p>现在有可用的IP地址了，后面就可以使用这个设置静态IP了<fancybox><img src="https://qn.heyunxiong.com//blog/vmware/image-20200422003228313.png" alt="image-20200422003228313"></fancybox></p>
+<h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><p>需要修改网卡配置文件,vim /etc/sysconfig/network- scripts/ifcfg-ens33。修改BOOTPROTO=static，ONBOOT=yes，开启自启动，然后需要添加上刚才那个动态分配的地址和子网掩码，网关，DNS服务器</p>
+<p><fancybox><img src="https://qn.heyunxiong.com//blog/vmware/image-20200422003441187.png" alt="image-20200422003441187"></fancybox></p>
+<p><fancybox><img src="https://qn.heyunxiong.com//blog/vmware/image-20200422004250084.png" alt="image-20200422004250084"></fancybox></p>
+<p>==119.29.29.29 是腾讯的DNS服务器==</p>
+<p><fancybox><img src="https://qn.heyunxiong.com//blog/vmware/image-20200422012901542.png" alt="image-20200422012901542"></fancybox></p>
+<p>设置好了之后，查看IP信息</p>
+<p><fancybox><img src="https://qn.heyunxiong.com//blog/vmware/image-20200422004353083.png" alt="image-20200422004353083"></fancybox></p>
+<h2 id="重启服务"><a href="#重启服务" class="headerlink" title="重启服务"></a>重启服务</h2><p>修改完成需要重新加载配置文件生效，</p>
+<p>systemctl restart network.service</p>
+<p><fancybox><img src="https://qn.heyunxiong.com//blog/vmware/image-20200422003836496.png" alt="image-20200422003836496"></fancybox></p>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><ul>
+<li>虚拟机ping外网， ==成功==</li>
+</ul>
+<p><fancybox><img src="https://qn.heyunxiong.com//blog/vmware/image-20200422004520156.png" alt="image-20200422004520156"></fancybox></p>
 <ul>
-<li><p>写上购买的域名</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MYDOMAIN.COM</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在购买的域名服务商设置映射信息 </p>
-<p>  可以参考阿里云域名配置</p>
-</li>
+<li>虚拟机ping宿主机 ==成功==</li>
 </ul>
-</li>
+<p><fancybox><img src="https://qn.heyunxiong.com//blog/vmware/image-20200422004537961.png" alt="image-20200422004537961"></fancybox></p>
+<ul>
+<li>宿主机ping虚拟机 ==成功==</li>
 </ul>
-<blockquote>
-<p>详细搭建视频教程</p>
-<p><a href="https://www.bilibili.com/video/av44544186" target="_blank" rel="noopener">https://www.bilibili.com/video/av44544186</a>  </p>
-<p>from <a href="https://space.bilibili.com/384068749?from=search&seid=17737282554247464472" target="_blank" rel="noopener">CodeSheep</a> </p>
-</blockquote>
+<p><fancybox><img src="https://qn.heyunxiong.com//blog/vmware/image-20200422004645128.png" alt="image-20200422004645128"></fancybox></p>
+<h2 id="创建多个节点"><a href="#创建多个节点" class="headerlink" title="创建多个节点"></a>创建多个节点</h2><p>创建第二个节点主机，第三个节点主机 ，可使用clone功能，需要先停掉目前的虚拟机</p>
+<p><fancybox><img src="https://qn.heyunxiong.com//blog/vmware/image-20200422005040453.png" alt="image-20200422005040453"></fancybox></p>
+<p>克隆第一台机子</p>
+<p><fancybox><img src="https://qn.heyunxiong.com//blog/vmware/image-20200422005842377.png" alt="image-20200422005842377"></fancybox></p>
+<p><fancybox><img src="https://qn.heyunxiong.com//blog/vmware/image-20200422005916658.png" alt="image-20200422005916658"></fancybox></p>
+<p><fancybox><img src="https://qn.heyunxiong.com//blog/vmware/image-20200422005927563.png" alt="image-20200422005927563"></fancybox></p>
+<p><fancybox><img src="https://qn.heyunxiong.com//blog/vmware/image-20200422010001127.png" alt="image-20200422010001127"></fancybox></p>
+<p><fancybox><img src="https://qn.heyunxiong.com//blog/vmware/image-20200422010013671.png" alt="image-20200422010013671"></fancybox></p>
+<p><fancybox><img src="https://qn.heyunxiong.com//blog/vmware/image-20200422011521979.png" alt="image-20200422011521979"></fancybox></p>
+<h3 id="修改其他节点的IP地址"><a href="#修改其他节点的IP地址" class="headerlink" title="修改其他节点的IP地址"></a>修改其他节点的IP地址</h3><p>开机测试下，新克隆出来的机子的地址和原来的一样，需要重新自动分配下，步骤和之前的一样。</p>
+<p><fancybox><img src="https://qn.heyunxiong.com//blog/vmware/image-20200422011959433.png" alt="image-20200422011959433"></fancybox></p>
+<h3 id="重新分配"><a href="#重新分配" class="headerlink" title="重新分配"></a>重新分配</h3><p><fancybox><img src="https://qn.heyunxiong.com//blog/vmware/image-20200422012106046.png" alt="image-20200422012106046"></fancybox></p>
+<h3 id="修改配置文件-1"><a href="#修改配置文件-1" class="headerlink" title="修改配置文件"></a>修改配置文件</h3><p>这里需要把刚分配的地址修改成新的。</p>
+<p><fancybox><img src="https://qn.heyunxiong.com//blog/vmware/image-20200422012310937.png" alt="image-20200422012310937"></fancybox></p>
+<h3 id="重启网卡服务"><a href="#重启网卡服务" class="headerlink" title="重启网卡服务"></a>重启网卡服务</h3><p><fancybox><img src="https://qn.heyunxiong.com//blog/vmware/image-20200422012438431.png" alt="image-20200422012438431"></fancybox></p>
+<h3 id="测试新节点的网络连通"><a href="#测试新节点的网络连通" class="headerlink" title="测试新节点的网络连通"></a>测试新节点的网络连通</h3><p>主要是ping 兄弟主机/宿主机</p>
+<ul>
+<li>ping 兄弟主机 ==成功==</li>
+</ul>
+<p><fancybox><img src="https://qn.heyunxiong.com//blog/vmware/image-20200422012516566.png" alt="image-20200422012516566"></fancybox></p>
+<ul>
+<li>ping 宿主机 ，外网 ==成功==</li>
+</ul>
+<p><fancybox><img src="https://qn.heyunxiong.com//blog/vmware/image-20200422012629725.png" alt="image-20200422012629725"></fancybox></p>
+<ul>
+<li>宿主机ping 克隆机 ==成功==</li>
+</ul>
+<p><fancybox><img src="https://qn.heyunxiong.com//blog/vmware/image-20200422012701187.png" alt="image-20200422012701187"></fancybox></p>
+<p>第三个节点操作类似于第二个，重点就是重新获取地址，把新的地址在配置文件中修改好这样就有了三个节点主机了，算是一个小小的集群，可以用来当作学习环境。</p>
+<p><fancybox><img src="https://qn.heyunxiong.com//blog/vmware/image-20200422012950907.png" alt="image-20200422012950907"></fancybox> </p>
 
           
             <br>
@@ -454,7 +483,7 @@
           
         
           
-            <p>本文永久链接是： <a href=https://heyunxiong.com/2019/04/17/Hexo-GitHub%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/>https://heyunxiong.com/2019/04/17/Hexo-GitHub%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</a></p>
+            <p>本文永久链接是： <a href=https://heyunxiong.com/2020/04/22/VMware%E5%A4%9A%E8%8A%82%E7%82%B9%E9%9D%99%E6%80%81%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/>https://heyunxiong.com/2020/04/22/VMware%E5%A4%9A%E8%8A%82%E7%82%B9%E9%9D%99%E6%80%81%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/</a></p>
           
         
       </blockquote>
@@ -475,10 +504,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-04-03T12:15:15+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-04-22T21:19:40+08:00">
   <a class='notlink'>
     <i class="fas fa-save" aria-hidden="true"></i>
-    <p>更新于：Apr 3, 2020</p>
+    <p>更新于：Apr 22, 2020</p>
   </a>
 </div>
 
@@ -487,7 +516,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i><p>博客</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i><p>虚拟机</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%A4%9A%E8%8A%82%E7%82%B9/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i><p>多节点</p></a></div>
 
 
         
@@ -505,7 +534,9 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=https://heyunxiong.com/2019/04/17/Hexo-GitHub%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/&title=Hexo+GitHub博客搭建 - Yunxiong He&summary=即使没有自己买服务器去搭建， 可以借助GitHub Page免费托管功能，也可以实现静态博客的搭建！"
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://heyunxiong.com/2020/04/22/VMware%E5%A4%9A%E8%8A%82%E7%82%B9%E9%9D%99%E6%80%81%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/&title=VMware多节点静态网络配置 - Yunxiong He&summary=
+基于VMware虚拟机搭建多节点环境，给自己学习弄一个多节点的环境
+"
           
           >
           
@@ -517,7 +548,9 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://heyunxiong.com/2019/04/17/Hexo-GitHub%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/&title=Hexo+GitHub博客搭建 - Yunxiong He&summary=即使没有自己买服务器去搭建， 可以借助GitHub Page免费托管功能，也可以实现静态博客的搭建！"
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://heyunxiong.com/2020/04/22/VMware%E5%A4%9A%E8%8A%82%E7%82%B9%E9%9D%99%E6%80%81%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/&title=VMware多节点静态网络配置 - Yunxiong He&summary=
+基于VMware虚拟机搭建多节点环境，给自己学习弄一个多节点的环境
+"
           
           >
           
@@ -529,7 +562,9 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=https://heyunxiong.com/2019/04/17/Hexo-GitHub%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/&title=Hexo+GitHub博客搭建 - Yunxiong He&summary=即使没有自己买服务器去搭建， 可以借助GitHub Page免费托管功能，也可以实现静态博客的搭建！"
+          href="http://service.weibo.com/share/share.php?url=https://heyunxiong.com/2020/04/22/VMware%E5%A4%9A%E8%8A%82%E7%82%B9%E9%9D%99%E6%80%81%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/&title=VMware多节点静态网络配置 - Yunxiong He&summary=
+基于VMware虚拟机搭建多节点环境，给自己学习弄一个多节点的环境
+"
           
           >
           
@@ -553,8 +588,9 @@
         
           <div class="prev-next">
             
-              <a class='prev' href='/2019/07/13/SpringBoot-Hello-World/'>
-                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>[SpringBoot] Hello World!</p>
+            
+              <a class='next' href='/2019/07/13/SpringBoot-Hello-World/'>
+                <p class='title'>[SpringBoot] Hello World!<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
                 <p class='content'>
 看了这么多SpringBoot的HelloWorld，其实每次看都要根据博主的思路梳理一次，实在是有点浪费时间；干脆就自己动手弄一份好了，以后查回忆起来比较快！
 
@@ -562,7 +598,6 @@
 
 创建项目过程创建新项目 ...</p>
               </a>
-            
             
           </div>
         
@@ -589,7 +624,7 @@
 
   <script>
     window.subData = {
-      title: 'Hexo+GitHub博客搭建',
+      title: 'VMware多节点静态网络配置',
       tools: true
     }
   </script>
@@ -613,7 +648,7 @@
 
 
     <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Git"><span class="toc-text">安装Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Node-js"><span class="toc-text">安装Node.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Hexo"><span class="toc-text">安装Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码版本控制平台"><span class="toc-text">代码版本控制平台</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#推送到远程github仓库配置"><span class="toc-text">推送到远程github仓库配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#购买域名-可选"><span class="toc-text">购买域名(可选)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关联购买的域名"><span class="toc-text">关联购买的域名</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前提准备："><span class="toc-text">前提准备：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装软件，创建虚拟机"><span class="toc-text">安装软件，创建虚拟机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改VMware网络连接模式"><span class="toc-text">修改VMware网络连接模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动态分配地址"><span class="toc-text">动态分配地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改配置文件"><span class="toc-text">修改配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重启服务"><span class="toc-text">重启服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#测试"><span class="toc-text">测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建多个节点"><span class="toc-text">创建多个节点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#修改其他节点的IP地址"><span class="toc-text">修改其他节点的IP地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重新分配"><span class="toc-text">重新分配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改配置文件-1"><span class="toc-text">修改配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重启网卡服务"><span class="toc-text">重启网卡服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测试新节点的网络连通"><span class="toc-text">测试新节点的网络连通</span></a></li></ol></li></ol>
     </div>
   </section>
 
