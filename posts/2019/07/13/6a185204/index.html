@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en,default">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Yunxiong He">
+    
+    <title>
+        
+            SpringBoot - Hello World |
+        
+        Yunxiong&#39;s
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="https://hyx-blog.oss-cn-shenzhen.aliyuncs.com/favicon/favicon.ico">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/regular.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/solid.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/brands.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"heyunxiong.com","root":"/","language":["en","default"]}
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":false},"style":{"primary_color":"#95afc0","favicon":"https://hyx-blog.oss-cn-shenzhen.aliyuncs.com/favicon/favicon.ico","avatar":"https://hyx-blog.oss-cn-shenzhen.aliyuncs.com/avatar/binzhang-2.png","font_size":null,"font_family":"STSong","hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":true,"background_img":null,"description":"梦想在流浪～","font_color":"#7f8fa6","hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":true},"comment":{"enable":true,"use":"waline","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":"https://ver.heyunxiong.com/","reaction":false,"version":2}},"post":{"author_label":{"enable":false,"auto":false,"custom_label_list":["Javaer"]},"word_count":{"enable":true,"wordcount":true,"min2read":false},"img_align":"left","copyright_info":true},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+               Yunxiong&#39;s
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">SpringBoot - Hello World</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="https://hyx-blog.oss-cn-shenzhen.aliyuncs.com/avatar/binzhang-2.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Yunxiong He</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2019-07-13 23:44:14</span>
+        <span class="mobile">2019-07-13 23:44</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2023-05-08 14:59:31</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/Tech/">Tech</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/Tech/Framework/">Framework</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/Tech/Framework/SpringBoot/">SpringBoot</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/spring-family/">spring-family</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>看了这么多SpringBoot的HelloWorld，其实每次看都要根据博主的思路梳理一次，实在是有点浪费时间；干脆就自己动手弄一份好了，以后查回忆起来比较快！</p>
+<h1 id="创建工程"><a href="#创建工程" class="headerlink" title="创建工程"></a>创建工程</h1><h2 id="创建新项目"><a href="#创建新项目" class="headerlink" title="创建新项目"></a>创建新项目</h2><p>打开IDEA，创建一个新的项目<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://qn.heyunxiong.com/tech/spring/springboot-helloworld/f6f1b0610fd2929245ccfe51eeb240fd_MD5.png"
+                      alt="1"
+                ></p>
+<h2 id="选择Spring-Initializr"><a href="#选择Spring-Initializr" class="headerlink" title="选择Spring Initializr"></a>选择Spring Initializr</h2><p>如果IDEA版本是高级版本，会有Spring Initializr的功能模块选项；社区版的没有，不过也可以创建Maven工程，然后把下面的POM文件的关键信息粘贴上去</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0&quot;</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.1.6.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">relativePath</span>/&gt;</span> <span class="comment">&lt;!-- lookup parent from repository --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.sean<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springbootdemo<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.0.1-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>springbootdemo<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">description</span>&gt;</span>Demo project for Spring Boot By Sean<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>12<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-test<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="选择SDK的版本"><a href="#选择SDK的版本" class="headerlink" title="选择SDK的版本"></a>选择SDK的版本</h2><p>这里用了最新的12，目前8的使用率应该是最广的。<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://qn.heyunxiong.com/tech/spring/springboot-helloworld/3d9ae63fea98d0f413ac78cd830d1078_MD5.png"
+                      alt="2"
+                ></p>
+<h2 id="填写项目信息"><a href="#填写项目信息" class="headerlink" title="填写项目信息"></a>填写项目信息</h2><p>填好项目的坐标（Group，Artifact），注意选择匹配的 Java Version<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://qn.heyunxiong.com/tech/spring/springboot-helloworld/a4bd10402d5d5fc3ee0f8c27c0711aa5_MD5.png"
+                      alt="3"
+                ></p>
+<h2 id="选择起步依赖"><a href="#选择起步依赖" class="headerlink" title="选择起步依赖"></a>选择起步依赖</h2><p>Spring Initializr的作用就是可以这样定制地选择自己要依赖的功能，这里为了简单起见，就选择一个web起步依赖。<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://qn.heyunxiong.com/tech/spring/springboot-helloworld/71127b6a66ee024e576ced379b3b1b95_MD5.png"
+                      alt="4"
+                ></p>
+<h2 id="填写好项目名称"><a href="#填写好项目名称" class="headerlink" title="填写好项目名称"></a>填写好项目名称</h2><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://qn.heyunxiong.com/tech/spring/springboot-helloworld/26c550370ed138fb84a393f959d059a3_MD5.png"
+                      alt="5"
+                ></p>
+<h2 id="进度条信息"><a href="#进度条信息" class="headerlink" title="进度条信息"></a>进度条信息</h2><p>点击完成的时候，IDEA就会帮我们去下载那些依赖jar包，注意IDEA右下角的这些进程条<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://qn.heyunxiong.com/tech/spring/springboot-helloworld/8873811243af85fe8de98fb6aab9afe0_MD5.png"
+                      alt="6"
+                ></p>
+<h1 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h1><h2 id="项目初始结构"><a href="#项目初始结构" class="headerlink" title="项目初始结构"></a>项目初始结构</h2><p>项目的初始目录结构，其中里面的（mvnw,mvnw.cmd,Help.md）这几个是IDEA生成的文件，可以删除，不影响项目。<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://qn.heyunxiong.com/tech/spring/springboot-helloworld/dc8e65412c4bd3532ff9cda752dfd255_MD5.png"
+                      alt="7"
+                ></p>
+<h2 id="POM-xml文件"><a href="#POM-xml文件" class="headerlink" title="POM.xml文件"></a>POM.xml文件</h2><p>pom文件里面有spring-boot-starter-web这个起步依赖，这个就是我们开始创建项目过程中选择的web起步依赖，而spring-boot-starter-test是IDEA会默认帮我们带上的，还有一个父依赖，显示当前的使用的springboot版本<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://qn.heyunxiong.com/tech/spring/springboot-helloworld/0416737386808402175f4c476a647842_MD5.png"
+                      alt="8"
+                ></p>
+<h2 id="主程序入口文件"><a href="#主程序入口文件" class="headerlink" title="主程序入口文件"></a>主程序入口文件</h2><p>会自动的生成一个后缀是×××Application.java的文件，通过@SpringBootApplication表明 该类是入口程序<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://qn.heyunxiong.com/tech/spring/springboot-helloworld/3aa438bd7fe45aa4790cb09ee712ac9e_MD5.png"
+                      alt="9"
+                ></p>
+<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p>配置文件初始时是空的，以后有需要自己配置的信息，可以在这里覆盖掉默认配置。<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://qn.heyunxiong.com/tech/spring/springboot-helloworld/28780e1183a53bfa5aee6303d1f4054e_MD5.png"
+                      alt="10"
+                ></p>
+<h2 id="测试类入口文件"><a href="#测试类入口文件" class="headerlink" title="测试类入口文件"></a>测试类入口文件</h2><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://qn.heyunxiong.com/tech/spring/springboot-helloworld/80d4405c8143e1b8a3c1446fc0d77125_MD5.png"
+                      alt="11"
+                ><br>项目的创建和项目的结构介绍就差不多了（其实是知识储备不足了），接下来开始快速的写一个Hello World</p>
+<h1 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h1><h2 id="编写Controller"><a href="#编写Controller" class="headerlink" title="编写Controller"></a>编写Controller</h2><p>创建一个Controller类，用来控制转发请求。<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://qn.heyunxiong.com/tech/spring/springboot-helloworld/2531bdbf62cb84caed3bb79a40bab30c_MD5.png"
+                      alt="12"
+                ></p>
+<h2 id="启动SpringBoot"><a href="#启动SpringBoot" class="headerlink" title="启动SpringBoot"></a>启动SpringBoot</h2><p>注意访问的端口号，一般默认是8080，因为内置的是Tomcat。<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://qn.heyunxiong.com/tech/spring/springboot-helloworld/8e5e9267de11b4f646d5865e3fa410b9_MD5.png"
+                      alt="13"
+                ></p>
+<h2 id="浏览器访问"><a href="#浏览器访问" class="headerlink" title="浏览器访问"></a>浏览器访问</h2><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://qn.heyunxiong.com/tech/spring/springboot-helloworld/2a824664129cd293e26feaaad76123db_MD5.png"
+                      alt="14"
+                ><br>好了，这就是springboot的helloworld了。</p>
+<h2 id="自定义Banner"><a href="#自定义Banner" class="headerlink" title="自定义Banner"></a>自定义Banner</h2><p>在resources里面创建Banner.txt，然后复制一个神兽！<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://qn.heyunxiong.com/tech/spring/springboot-helloworld/e2ecfa7c3e46d8c9f7e6e227da440505_MD5.png"
+                      alt="15"
+                ></p>
+<p>重新启动即可。<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://qn.heyunxiong.com/tech/spring/springboot-helloworld/86d8357ddb2bae9c4561fcb7c4bbfed0_MD5.png"
+                      alt="16"
+                ></p>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    
+<div class="article-copyright-info-container">
+    <ul class="copyright-info-content">
+        <li class="post-title">
+            <span class="type">Title</span>：<span class="content">SpringBoot - Hello World</span>
+        </li>
+        <li class="post-author">
+            <span class="type">Author</span>：<span class="content">Yunxiong He</span>
+        </li>
+        <li class="post-time">
+            <span class="type">Created</span>：<span class="content">2019-07-13 23:44:14</span>
+        </li>
+        <li class="post-link">
+            <span class="type">Link</span>：<span class="content">posts/2019/07/13/6a185204/</span>
+        </li>
+        <li class="post-license">
+            <span class="type">Copyright</span>：<span class="content">All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.</span>
+        </li>
+    </ul>
+    <div class="copy-copyright-info flex-center tooltip" data-content="Copy copyright info" data-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                </div>
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/spring-family/">#spring-family</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/posts/2019/07/21/56cd6705/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">Linux时间戳处理</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/posts/2019/06/30/471f93a1/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Linux基础命令</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+                <div class="comment-container">
+                    
+<div class="comments-container">
+    <div id="comments-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments"></i>&nbsp;Comments
+    </div>
+    
+        
+            
+
+    <div class="waline-comment-container">
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@waline/client@v2/dist/waline.css"/>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@waline/client@v2/dist/waline-meta.css"/>
+        <script  src="//cdn.jsdelivr.net/npm/@waline/client@v2/dist/waline.js"></script>
+        <div id="waline-comment"></div>
+        <script >
+          function loadWaline() {
+            Waline.init({
+              el: '#waline-comment',
+              serverURL: 'https://ver.heyunxiong.com/',
+              lang: 'en,default' || 'zh-CN',
+              comment: '.post-comments-count',
+              reaction: 'false' === 'true'
+            })
+          }
+
+          if ('false' === 'true') {
+            setTimeout(() => {
+              loadWaline()
+            }, 1000)
+          } else {
+            window.addEventListener('DOMContentLoaded', loadWaline)
+          }
+        </script>
+    </div>
+
+
+
+        
+    
+</div>
+
+                </div>
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%B7%A5%E7%A8%8B"><span class="nav-text">创建工程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%96%B0%E9%A1%B9%E7%9B%AE"><span class="nav-text">创建新项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9Spring-Initializr"><span class="nav-text">选择Spring Initializr</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9SDK%E7%9A%84%E7%89%88%E6%9C%AC"><span class="nav-text">选择SDK的版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A1%AB%E5%86%99%E9%A1%B9%E7%9B%AE%E4%BF%A1%E6%81%AF"><span class="nav-text">填写项目信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E8%B5%B7%E6%AD%A5%E4%BE%9D%E8%B5%96"><span class="nav-text">选择起步依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A1%AB%E5%86%99%E5%A5%BD%E9%A1%B9%E7%9B%AE%E5%90%8D%E7%A7%B0"><span class="nav-text">填写好项目名称</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E5%BA%A6%E6%9D%A1%E4%BF%A1%E6%81%AF"><span class="nav-text">进度条信息</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"><span class="nav-text">项目结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E5%88%9D%E5%A7%8B%E7%BB%93%E6%9E%84"><span class="nav-text">项目初始结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#POM-xml%E6%96%87%E4%BB%B6"><span class="nav-text">POM.xml文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E7%A8%8B%E5%BA%8F%E5%85%A5%E5%8F%A3%E6%96%87%E4%BB%B6"><span class="nav-text">主程序入口文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-text">配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E7%B1%BB%E5%85%A5%E5%8F%A3%E6%96%87%E4%BB%B6"><span class="nav-text">测试类入口文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Demo"><span class="nav-text">Demo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E5%86%99Controller"><span class="nav-text">编写Controller</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8SpringBoot"><span class="nav-text">启动SpringBoot</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E8%AE%BF%E9%97%AE"><span class="nav-text">浏览器访问</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89Banner"><span class="nav-text">自定义Banner</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2019</span> -
+            
+            2023
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">Yunxiong He</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+            <div class="icp-info info-item">
+                <a target="_blank" rel="nofollow"
+                   href="https://beian.miit.gov.cn"
+                >
+                    粤ICP备20017625号
+                </a>
+            </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/code-block.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/post-helper.js"></script>
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/libs/anime.min.js"></script>
+        
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/toc.js"></script>
+        
+    
+</div>
+
+
+
+</body>
+</html>
