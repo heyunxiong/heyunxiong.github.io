@@ -22,7 +22,7 @@
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {}
     KEEP.hexo_config = {"hostname":"heyunxiong.com","root":"/","language":["en","default"]}
-    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":false},"style":{"primary_color":"#95afc0","favicon":"https://hyx-blog.oss-cn-shenzhen.aliyuncs.com/favicon/favicon.ico","avatar":"https://hyx-blog.oss-cn-shenzhen.aliyuncs.com/avatar/binzhang-2.png","font_size":null,"font_family":"STSong","hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":true,"background_img":null,"description":"梦想在流浪～","font_color":"#7f8fa6","hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":true},"comment":{"enable":true,"use":"waline","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":"https://ver.heyunxiong.com/","reaction":false,"version":2}},"post":{"author_label":{"enable":false,"auto":false,"custom_label_list":["Javaer"]},"word_count":{"enable":true,"wordcount":true,"min2read":false},"img_align":"left","copyright_info":true},"version":"3.6.1"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":false},"style":{"primary_color":"#95afc0","favicon":"https://hyx-blog.oss-cn-shenzhen.aliyuncs.com/favicon/favicon.ico","avatar":"https://hyx-blog.oss-cn-shenzhen.aliyuncs.com/avatar/binzhang-2.png","font_size":null,"font_family":"STSong","hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":true,"background_img":null,"description":"梦想在流浪～","font_color":"#7f8fa6","hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":true,"use":"waline","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":"https://ver.heyunxiong.com/","reaction":false,"version":2}},"post":{"author_label":{"enable":false,"auto":false,"custom_label_list":["Javaer"]},"word_count":{"enable":false,"wordcount":true,"min2read":false},"img_align":"left","copyright_info":true},"version":"3.6.1"}
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
     KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
     KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
@@ -34,6 +34,9 @@
 <div class="progress-bar-container">
     
 
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
     
 </div>
 
@@ -64,7 +67,7 @@
                             <a class="active"
                                href="/"
                             >
-                                HOME
+                                /
                             </a>
                         </li>
                     
@@ -85,7 +88,7 @@
             
                 <li class="drawer-menu-item flex-center">
                     <a class="active"
-                       href="/">HOME</a>
+                       href="/">/</a>
                 </li>
             
         </ul>
@@ -111,6 +114,82 @@
                 
 
                 <h3 class="home-article-title">
+                    <a href="/posts/2023/03/10/52acc192/">
+                        健康是二进制的“1”
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        从一篇文章说起健康学习到150岁 - 人体系统调优不完全指南
+从原理到实践，详细阐述了维持健康的手段，结合自身的情况，感触良多
+意识转变仗着年轻的资本，以前根本不会care健康的问题；一切都在掌控中，没有什么睡一觉还解决不了的
+当年是真的有这种资本，...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <!-- <i class="fas fa-history"></i>&nbsp; -->
+            <!-- <span class="home-article-date" data-updated="Tue May 09 2023 23:08:32 GMT+0800">
+                2023-05-09
+            </span> -->
+            Mar 10, 2023
+        </span>
+        
+        
+    </div>
+
+    <!-- <a class="read-more" href="/posts/2023/03/10/52acc192/">Read more&nbsp;<i class="fas fa-angle-right"></i></a> -->
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/posts/2022/10/16/f59e24b4/">
+                        Git命令操作
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        Git基本工作流
+Git 操作场景阶段Workspace 工作区顾名思义，就是进行文件操作的地方，特点有：
+
+可以添加文件到git的“监控”(track)中，移除亦可 
+可以“监控”文件的修改，根据自己的需要进行内容调整 
+可以进行分支的合并，管理标...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <!-- <i class="fas fa-history"></i>&nbsp; -->
+            <!-- <span class="home-article-date" data-updated="Sat May 06 2023 11:47:04 GMT+0800">
+                2023-05-06
+            </span> -->
+            Oct 16, 2022
+        </span>
+        
+        
+    </div>
+
+    <!-- <a class="read-more" href="/posts/2022/10/16/f59e24b4/">Read more&nbsp;<i class="fas fa-angle-right"></i></a> -->
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
                     <a href="/posts/2021/10/09/3da1b958/">
                         JS自定义博客园导航栏
                     </a>
@@ -126,16 +205,17 @@
                 <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Sat May 06 2023 11:47:04 GMT+0800">
+            <!-- <i class="fas fa-history"></i>&nbsp; -->
+            <!-- <span class="home-article-date" data-updated="Sat May 06 2023 11:47:04 GMT+0800">
                 2023-05-06
-            </span>
+            </span> -->
+            Oct 09, 2021
         </span>
         
         
     </div>
 
-    <a class="read-more" href="/posts/2021/10/09/3da1b958/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+    <!-- <a class="read-more" href="/posts/2021/10/09/3da1b958/">Read more&nbsp;<i class="fas fa-angle-right"></i></a> -->
 </div>
 
             </li>
@@ -161,16 +241,17 @@
                 <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed May 10 2023 13:38:50 GMT+0800">
+            <!-- <i class="fas fa-history"></i>&nbsp; -->
+            <!-- <span class="home-article-date" data-updated="Wed May 10 2023 13:38:50 GMT+0800">
                 2023-05-10
-            </span>
+            </span> -->
+            Sep 05, 2021
         </span>
         
         
     </div>
 
-    <a class="read-more" href="/posts/2021/09/05/20da08b1/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+    <!-- <a class="read-more" href="/posts/2021/09/05/20da08b1/">Read more&nbsp;<i class="fas fa-angle-right"></i></a> -->
 </div>
 
             </li>
@@ -197,164 +278,17 @@ apple care+ 认识
                 <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Sat May 06 2023 11:46:23 GMT+0800">
+            <!-- <i class="fas fa-history"></i>&nbsp; -->
+            <!-- <span class="home-article-date" data-updated="Sat May 06 2023 11:46:23 GMT+0800">
                 2023-05-06
-            </span>
+            </span> -->
+            Oct 18, 2020
         </span>
         
         
     </div>
 
-    <a class="read-more" href="/posts/2020/10/18/fe7a9e3b/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/posts/2020/04/22/25cfb628/">
-                        VMware多节点静态网络配置
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        VMware多节点静态网络配置基于VMware虚拟机搭建多节点环境，给自己学习弄一个多节点的环境
-前提准备
-VMware虚拟机
-CentOS7 ISO 文件 下载地址，下载DVD标准版即可
-
-安装软件 创建虚拟机
-安装VMware， 略过
-创建新的虚...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Sat May 06 2023 11:47:04 GMT+0800">
-                2023-05-06
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/posts/2020/04/22/25cfb628/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/posts/2020/02/11/53c436bb/">
-                        图床的折腾经历
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        
-
-图床的折腾经历本来只是记录在坚果云中折腾失败的经历，但是后来越想越觉得应该细化下自己在这方面扑过的街
-图片的困扰写博客需要图文并茂，这样才更有助于理解，一图胜千言，但是图片的存储一直困扰着我：1.图片会越来越多，空间越来越大；2.图片和文章之间的...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Sat May 06 2023 11:47:04 GMT+0800">
-                2023-05-06
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/posts/2020/02/11/53c436bb/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/posts/2019/07/28/16aa8949/">
-                        Markdown嵌入PDF处理
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        
-
-在Markdown中嵌入pdf的想法始于对all-in-one，什么都想往里面塞，于是想看看markdown的语法是否支持pdf；
-原生的Markdown本身不支持pdf嵌入，因此需要加入HTML的标签元素&lt;object&gt;和&lt;e...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Sat May 06 2023 11:47:04 GMT+0800">
-                2023-05-06
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/posts/2019/07/28/16aa8949/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/posts/2019/07/21/56cd6705/">
-                        Linux时间戳处理
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        Why工作过程中，需要处理一下Linux的时间，发现对于shell脚本的时间处理不是很熟悉，查了下资料，顺手记录一下
-解决过程思路
-解决的方法其实很简答，就是取前后时间，然后进行相减即可，只是期间需要去查一下对应的函数
-date是内置函数，获取当前系...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Sat May 06 2023 11:47:04 GMT+0800">
-                2023-05-06
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/posts/2019/07/21/56cd6705/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+    <!-- <a class="read-more" href="/posts/2020/10/18/fe7a9e3b/">Read more&nbsp;<i class="fas fa-angle-right"></i></a> -->
 </div>
 
             </li>
@@ -389,21 +323,6 @@ date是内置函数，获取当前系...
             
 <footer class="footer">
     <div class="info-container">
-        <div class="copyright-info info-item">
-            &copy;
-            
-                <span>2019</span> -
-            
-            2023
-            
-                &nbsp;<i class="fas fa-heart icon-animate"></i>
-                &nbsp;<a href="/">Yunxiong He</a>
-            
-        </div>
-        
-        <div class="theme-info info-item">
-            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
-        </div>
         
             <div class="icp-info info-item">
                 <a target="_blank" rel="nofollow"
@@ -413,6 +332,22 @@ date是内置函数，获取当前系...
                 </a>
             </div>
         
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2019</span> -
+            
+            2023
+            
+                &nbsp;<i class="fas fa-heart icon-animate" style="color: #ea1a1a;"></i>
+                &nbsp;<a href="/">Yunxiong He</a>
+            
+        </div>
+        
+        <!-- <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div> -->
+
         
     </div>
 </footer>
@@ -487,9 +422,41 @@ date是内置函数，获取当前系...
     <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/lazyload.js"></script>
 
 
-<div class="post-scripts">
+<div class="post-scripts pjax">
     
 </div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
 
 
 
