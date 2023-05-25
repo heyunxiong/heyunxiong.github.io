@@ -572,9 +572,9 @@ header label {
 .profile-container {
   justify-content: center;
   align-items: center;
+  padding-bottom: 180px;
 }
 .intro {
-  padding-bottom: 180px;
   text-align: center;
 }
 .intro .avatar {
@@ -605,9 +605,8 @@ header label {
   cursor: pointer;
 }
 .nickname {
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: normal;
-  font-family: cursive;
 }
 .links a {
   padding: 0 5px;
