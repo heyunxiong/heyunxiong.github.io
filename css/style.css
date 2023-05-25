@@ -233,7 +233,6 @@ a:hover {
   justify-content: space-between;
 }
 .main {
-  background-image: url("");
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: auto;
@@ -572,6 +571,8 @@ header label {
 .profile-container {
   justify-content: center;
   align-items: center;
+  padding-top: 0px;
+  padding-bottom: 170px;
 }
 .intro {
   text-align: center;
