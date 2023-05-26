@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en,default">
-
 <head>
     <meta charset="UTF-8">
 <meta name="viewport"
@@ -40,30 +39,11 @@
 
 
 <meta name="generator" content="Hexo 6.3.0"></head>
-
 <body>
-    <script>
-        // this function is used to check current theme before page loaded.
-        (() => {
-            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
-            const isDark = currentTheme === 'dark';
-            const pagebody = document.getElementsByTagName('body')[0]
-            if (isDark) {
-                pagebody.classList.add('dark-theme');
-                // mobile
-                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
-            } else {
-                pagebody.classList.remove('dark-theme');
-                // mobile
-                document.getElementById("mobile-toggle-theme").innerText = "· Light"
-            }
-        })();
-    </script>
-
     <div class="wrapper">
         <header>
-    <nav class="navbar" style="display: none">
-        <div class="container" style="display: none">
+    <nav class="navbar">
+        <div class="container">
             <div class="navbar-header header-logo"><a href="/">Yunxiong&#39;s</a></div>
             <div class="menu navbar-right">
                 
@@ -76,8 +56,8 @@
     </nav>
 
     
-    <nav class="navbar-mobile" id="nav-mobile"  style="display: none">
-        <div class="container" style="display: none;">
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
             <div class="navbar-header">
                 <div>
                     <a href="/">Yunxiong&#39;s</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
@@ -106,8 +86,8 @@
         }
     }
 </script>
-            <div class="main">
-                <div class="post-wrap archive">
+        <div class="main">
+            <div class="post-wrap archive">
     
     
         
@@ -123,14 +103,14 @@
     
     
 </div>
-            </div>
-            <footer id="footer" class="footer" style="display: none;">
+        </div>
+        <footer id="footer" class="footer">
     <div class="copyright">
-        <span>© Yunxiong He | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+        <span>©2019-2023</span>
+        <!-- Yunxiong He -->
     </div>
 </footer>
 
     </div>
 </body>
-
 </html>

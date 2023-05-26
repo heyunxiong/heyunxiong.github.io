@@ -13,31 +13,23 @@
   width: auto;
   max-width: 1200px;
   text-align: center;
-  padding-left: 1em;
-  padding-right: 1em;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
 .main {
-  background: url("") center center/cover no-repeat #666;
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: auto;
-  display: flex;
-  flex-direction: column;
 }
-.main .container {
+.container {
   padding-left: 1em;
   padding-right: 1em;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
 }
 .footer {
   height: 4rem;
   width: 100%;
   text-align: center;
   line-height: 4rem;
+  padding-top: 2em;
 }
