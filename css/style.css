@@ -233,6 +233,7 @@ a:hover {
   justify-content: space-between;
 }
 .main {
+  background: url("https://qn.heyunxiong.com/life/bg2.jpg") center center/cover no-repeat #666;
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: auto;
