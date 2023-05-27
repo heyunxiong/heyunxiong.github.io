@@ -873,6 +873,8 @@ header label {
   height: auto;
   margin: 0 auto;
   overflow: hidden;
+  margin-left: auto;
+  margin-right: 100%;
 }
 .post-content img[data-action="zoom"] {
   cursor: zoom-in;
