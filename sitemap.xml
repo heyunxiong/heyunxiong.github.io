@@ -4,6 +4,8 @@
   <url>
     <loc>/</loc>
   </url><url>
+    <loc>/about/</loc>
+  </url><url>
     <loc>/styles/</loc>
   </url>
 </urlset>
