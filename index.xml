@@ -7,12 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>About Me</title>
+      <title>关于</title>
+      <link>/aboutcn/</link>
+      <pubDate>Sun, 20 Aug 2023 13:40:16 +0800</pubDate>
+      
+      <guid>/aboutcn/</guid>
+      <description>关于站点 这是一个前往其他子网站的导航站点 有一段时间我陷入了无尽的焦虑，我应该把个人数字内容放在哪里更合适，我该如何管理它 于是这个网站就推出了 站点内容 👨🏻‍💻Docs: 技术文章集合 📝Blogs: 思考和日常 📸Gallery: 图片和视频 🚀more&amp;hellip; 脚手架工具 如果没有下面的服务或工具的帮助，我无法建立这个博客，谢谢
+服务器 Vercle 是一个很棒的静态站点部署平台，支持多种前端网页，可以部署自己的项目进行演示或学习
+SCG 静态内容生成器
+What is a Static Site Generator
+Docusaurus 来自Facebook的开源内容生成器 技术帖子是由它生成的，我还尝试了其他类似的文档生成器，例如“vuepress、gitbook”，但我选择它是因为它的用法和用户界面更友好
+Hexo Hexo 是我的第一个 SCG，我非常喜欢它。 它易于使用，并具有精彩的主题和插件/功能，可以帮助自定义您的博客 现在我用的是我自己调整的简洁大方的Keep主题来记录我的思考和日常发帖 我尝试过主题Volantis，我会给它5颗星； Next 是我之前选择的一个，很棒很简单的主题和风格
+Hugo 最快的SCG。 如果您有很多博客文章，您应该尝试一下 该主页使用的是 lynx 主题 和由Eternity生成的画廊
+站点日志 补充关于页面内容 // 2023 年 8 月 20 日 English | 中文</description>
+    </item>
+    
+    <item>
+      <title>About</title>
       <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>// TO-DO</description>
+      <description>About Site A navigation that goes to other sub-sites There has been a while that i was lost in endless anxiety, where should i place personal digital content much more proper, and how can i manager it Hence this site launched
+Content 👨🏻‍💻Docs: Technical post collection 📝Blogs: Thinking and daily 📸Gallery: Photos and videos 🚀more&amp;hellip; Scaffold I can&amp;rsquo;t build up this blog without the help of services or tools below, thanks</description>
     </item>
     
     <item>
