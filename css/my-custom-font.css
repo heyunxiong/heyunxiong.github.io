@@ -1,0 +1,14 @@
+:root {
+    --base-font-family: 'LXGWWenKai-Light';
+}
+
+@font-face {
+    font-family: 'LXGWWenKai-Light';
+    src: url('../font/LXGWWenKai-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+ }
+
+ .keep-markdown-body {
+    font-size: 1.35rem;
+}
