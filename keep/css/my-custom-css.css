@@ -1,0 +1,35 @@
+
+/* 字体设置 */
+:root {
+    --base-font-family: 'LXGWWenKai-Light';
+    --page-content-max-width: 950px;
+}
+
+@font-face {
+    font-family: 'LXGWWenKai-Light';
+    src: url('../font/LXGWWenKai-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+ }
+
+.keep-markdown-body {
+    font-size: 1.35rem;
+}
+
+
+/* 隐藏主题开发者信息 */
+.theme-info.info-item.default {
+    display: none;
+}
+
+/* 隐藏post的作者信息 */
+.post-page-container .post-content-container .post-content-bottom .post-header {
+    display: none;
+  }
+  
+@media (max-width: 800px) {
+    .post-page-container .post-content-container .post-content-bottom .post-header {
+        display: none;
+    }
+}
+

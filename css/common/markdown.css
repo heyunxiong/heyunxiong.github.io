@@ -196,7 +196,6 @@ keep-tablet()
   box-shadow: 0 0 0.2rem var(--shadow-color);
   cursor: zoom-in;
   opacity: 1;
-  pointer-events: none;
 }
 .keep-markdown-body img.hide {
   opacity: 0;
