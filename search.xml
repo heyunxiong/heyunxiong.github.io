@@ -1,16 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello Blog!</title>
+    <title>Hello Blog</title>
     <url>/posts/2019/04/07/11ed4b0a/</url>
-    <content><![CDATA[<p>Hello Blog!</p>
-<p>Yunxiong<br>2019-04-07</p>
+    <content><![CDATA[<p><img src="https://gitlab.com/seanhe/pics/-/raw/main/2024/11/11/20241111-2024-11-11-00-37-54.jpeg"></p>
+]]></content>
+      <categories>
+        <category>Blog</category>
+      </categories>
+      <tags>
+        <tag>hello</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>保持健康的重要性</title>
+    <url>/posts/2023/03/10/52acc192/</url>
+    <content><![CDATA[<h3 id="保持健康"><a href="#保持健康" class="headerlink" title="保持健康"></a>保持健康</h3><p>从一篇文章说起， 这篇文章是我在搜索关于“程序员健康”相关话题的时候发现的。</p>
+<p><a href="https://github.com/zijie0/HumanSystemOptimization">健康学习到150岁 - 人体系统调优不完全指南</a></p>
+<p>从原理到实践，详细阐述了维持健康的手段，结合最近自身的情况，感触良多。</p>
+<h3 id="1-意识转变"><a href="#1-意识转变" class="headerlink" title="1.意识转变"></a>1.意识转变</h3><p>仗着年轻的资本，以前根本不会care健康的问题；一切都在掌控中，没有什么睡一觉还解决不了的。</p>
+<p>当年是真的有这种资本，因为基本的三大因素：饮食、运动和睡眠，我都做的不错。饮食清淡，咸辣很少吃；运动不用说了，球场乞丐；睡眠更是准时上床，绝不看手机，倒头就没心没肺地睡着。</p>
+<p>上班之后，完全打乱之前的作息，这是必然的；难就难在自己并没有做出相应的措施去适应；饮食不用说，口味已经被带偏了；运动基本归零；作息不规律，长期熬夜。</p>
+<p>另外就是年纪问题，所有东西都有个保质期，或者说使用期限，身体的器官也是；<br>加之头条隔三差五就出现“猝死”的新闻，且不讨论背后具体因素，但趋向年轻化这让我有点想法：<br>如果连基本的健康问题都没办法解决，其他问题怎么搞？</p>
+<p>常唠叨的<strong>注意身体</strong>从来不是空话。</p>
+<p>Error can‘t be fixed itself.</p>
+<h3 id="2-身体状态"><a href="#2-身体状态" class="headerlink" title="2.身体状态"></a>2.身体状态</h3><p>身体状态已是定义上的亚健康状态 <a href="https://zh.wikipedia.org/zh-tw/%E4%BA%9A%E5%81%A5%E5%BA%B7">亚健康</a></p>
+<p>导致身体状况每况愈下的几个因素及背后原因</p>
+<ul>
+<li>久坐腰疼：基本无解，工作需要，顶多是升降桌缓解；有时候坐着坐着都不知道自己坐了多久</li>
+<li>运动量不足：疫情因素+运动场所的限制；放开解封后有所增加</li>
+<li>作息不规律：熬夜真是没有回头路的操作。。。吗？</li>
+<li>饮食不注意：吃得比较乱</li>
+</ul>
+<h3 id="3-新冠病毒"><a href="#3-新冠病毒" class="headerlink" title="3.新冠病毒"></a>3.新冠病毒</h3><p>年底放开的时候，引发一波“阳”流；自己也难于幸免，生病过程确实难受，好在发烧一天就退了，也不至于烧到要生要死，持续不断地咳嗽更折磨人。</p>
+<p>生病的过程中，情绪是令人沮丧的，想法都比较消极。只有当自己是那个“濑嘢”的人，才知道健康的重要性。</p>
+<p>期间也责问自己为什么不加强运动，说不定能顶过这次风波，熬熬就过去了；健康的问题又凸显了，暗暗道：好了一定要好好注意健康，多运动（现在显然是“好了伤疤忘了疼”）。</p>
+<h3 id="4-甲流"><a href="#4-甲流" class="headerlink" title="4.甲流"></a>4.甲流</h3><p>年后转季，流感的高发期；经历过去年年底的新冠潮，基本已经对感冒什么的感觉了，流感能有特别的，做好保暖就行了</p>
+<p>殊不知，自己还是中招了，以为是复阳，发烧难受了一天，后面看新闻大概率是甲流</p>
+<p>当时临时从办公室跑回来，在附近买药吃下。哇～ 现在回想起当时的那个难受程度，比阳还难受，可能是还在赶task，脑子直接爆炸，难受得很</p>
+<h3 id="5-个人感受"><a href="#5-个人感受" class="headerlink" title="5.个人感受"></a>5.个人感受</h3><p>说实话，经历过两次这种密集型的生病；换以前可能不屑一顾，切～。现在不行了，需要审视下已经出现的和潜在的习惯问题，不然健康出问题，得不偿失</p>
+<p>加之之前体检过一次，也不算特别好，三油甘脂有点点超标，其他还没什么；这些有问题的情况一般我都甩锅给“熬夜“。这种做法不行，需要正视问题</p>
+<p>不要让自己赚的钱都给了医院，健康永远是“1”</p>
+<h3 id="后续提升"><a href="#后续提升" class="headerlink" title="后续提升"></a>后续提升</h3><p><span style = "color: red"> 增加运动量，不要熬夜！</span></p>
+<p>没事多看几遍<strong>广东“卖药”台</strong>，增强危机意识</p>
+<iframe src="//player.bilibili.com/player.html?aid=66724348&bvid=BV1e4411y71X&cid=115716141&page=1"  scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" >  </iframe>
 ]]></content>
       <categories>
         <category>Life</category>
       </categories>
       <tags>
-        <tag>untag</tag>
+        <tag>健康</tag>
+        <tag>休息</tag>
       </tags>
   </entry>
 </search>

@@ -21,5 +21,13 @@ body > div.container > div > div > div:nth-child(1) > div.twelve.columns > hr {
 
 /* Set Layout Width */
 body > div.container {
-    max-width: 750px;
+    max-width: 720px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', serif;
+}
+
+body > div.container > div > div > div.trans > p:nth-child(33) {
+    margin-top: 30px;
 }
