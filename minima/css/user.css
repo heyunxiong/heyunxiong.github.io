@@ -9,16 +9,13 @@ body > div.container > div > div > div.row.mt-2 {
     border-top: 3px dotted #0FA0CE;
 }
 
+/* Home Search Function */
 body > div.container > div > div > div:nth-child(3) {
     display: none;
 }
 
+/* Home <hr>  */
 body > div.container > div > div > div:nth-child(1) > div.twelve.columns > hr {
-    display: none;
-}
-
-/* Hide All Posts */
-body > div.container > div > div > div.trans > h2 {
     display: none;
 }
 
