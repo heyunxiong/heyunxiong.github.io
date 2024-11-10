@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Minima -->
+  <!-- Hexo theme created by @adisaktijrs -->
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+
+  
+  <title>微信误删好友事件回顾</title><meta name="robots" content="noindex">
+  
+  <link rel="canonical" href="http://heyunxiong.com/posts/2023/04/25/766af03d/">
+  
+  <meta name="description" content="每天有一亿人教张小龙做微信，今天轮到我来教了。张小龙4个小时演讲全文：每天有1亿人教我做产品 好友管理就是一个迷个人对于微信好友管理复杂一直想吐槽很久了，趁着这个事情顺便整理下个人感觉混乱的逻辑 首先从产品角度来说，我不明白为什么微信以通讯录作为好友列表的称呼； 如果说微信是强调好友之间是弱关联的通">
+  
+  
+  <meta name="author" content="Sean He">
+  
+  
+  
+  <meta property="og:site_name" content="Sean He" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="微信误删好友事件回顾" />
+  
+  <meta property="og:description" content="每天有一亿人教张小龙做微信，今天轮到我来教了。张小龙4个小时演讲全文：每天有1亿人教我做产品 好友管理就是一个迷个人对于微信好友管理复杂一直想吐槽很久了，趁着这个事情顺便整理下个人感觉混乱的逻辑 首先从产品角度来说，我不明白为什么微信以通讯录作为好友列表的称呼； 如果说微信是强调好友之间是弱关联的通">
+  
+  <meta property="og:url" content="http://heyunxiong.com/posts/2023/04/25/766af03d/" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="微信误删好友事件回顾">
+  
+  <meta name="twitter:description" content="每天有一亿人教张小龙做微信，今天轮到我来教了。张小龙4个小时演讲全文：每天有1亿人教我做产品 好友管理就是一个迷个人对于微信好友管理复杂一直想吐槽很久了，趁着这个事情顺便整理下个人感觉混乱的逻辑 首先从产品角度来说，我不明白为什么微信以通讯录作为好友列表的称呼； 如果说微信是强调好友之间是弱关联的通">
+  
+  
+  
+  
+  <meta name="twitter:url" content="http://heyunxiong.com/posts/2023/04/25/766af03d/" />
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Preload fonts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="preload" href="/fonts/dm-serif-display-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-v2-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+<link rel="stylesheet" href="/css/normalize.css">
+
+  
+<link rel="stylesheet" href="/css/skeleton.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+<link rel="stylesheet" href="/css/prism-dark.css">
+
+  
+<link rel="stylesheet" href="/css/prism-line-numbers.css">
+
+  <!-- User css -->
+  
+  
+<link rel="stylesheet" href="/minima/css/user.css">
+
+  
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="https://hyx-blog.oss-cn-shenzhen.aliyuncs.com/favicon/favicon.ico">
+
+  <!-- Custom Theme Color Style
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <style>
+  a:not(.icon) {
+    text-decoration-color: #0FA0CE;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 50%,
+      #0FA0CE 50%
+    );
+  }
+  blockquote {
+    border-left: 8px solid #0FA0CE;
+  }
+  .nanobar .bar {
+    background: #0FA0CE;
+  }
+  .button.button-primary:hover,
+  button.button-primary:hover,
+  input[type="submit"].button-primary:hover,
+  input[type="reset"].button-primary:hover,
+  input[type="button"].button-primary:hover,
+  .button.button-primary:focus,
+  button.button-primary:focus,
+  input[type="submit"].button-primary:focus,
+  input[type="reset"].button-primary:focus,
+  input[type="button"].button-primary:focus {
+    background-color: #0FA0CE;
+    border-color: #0FA0CE;
+  }
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="search"]:focus,
+  input[type="text"]:focus,
+  input[type="tel"]:focus,
+  input[type="url"]:focus,
+  input[type="password"]:focus,
+  textarea:focus,
+  select:focus {
+    border: 1px solid #0FA0CE;
+  }
+</style>
+
+  <!-- Google Analytics (With Privacy Settings On)
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+
+  
+  <script src="/js/pic.min.js" defer></script>
+  
+
+  
+  <script src="/js/search.min.js" defer></script>
+  
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div>
+
+        <div class="row">
+  <div class="two columns" style="max-width: 50px">
+    <h1 class="mt-2 mode">
+      <div onclick=setDarkMode(true) id="darkBtn">🌗</div>
+      <div onclick=setDarkMode(false) id="lightBtn" class=hidden>🌗</div>
+      <script >
+        if (localStorage.getItem('preferredTheme') == 'dark') {
+          setDarkMode(true)
+        }
+        function setDarkMode(isDark) {
+          var darkBtn = document.getElementById('darkBtn')
+          var lightBtn = document.getElementById('lightBtn')
+          if (isDark) {
+            lightBtn.style.display = "block"
+            darkBtn.style.display = "none"
+            localStorage.setItem('preferredTheme', 'dark');
+          } else {
+            lightBtn.style.display = "none"
+            darkBtn.style.display = "block"
+            localStorage.removeItem('preferredTheme');
+          }
+          document.body.classList.toggle("darkmode");
+        }
+      </script>
+    </h1>
+  </div>
+
+  <div class="six columns ml-1">
+    <h1 class="mt-2">
+      Sean He
+    </h1>
+  </div>
+
+  <div class="twelve columns">
+    <div class="row">
+      <div class="nine columns left">
+        <a href="/">Home</a>
+        
+          
+          <a href="/archives" class="ml">Posts</a>
+          
+        
+          
+          <a href="/about" class="ml">About</a>
+          
+        
+        
+      </div>
+    </div>
+    <hr style="margin-bottom: 2.6rem">
+  </div>
+</div>
+
+        <div class="trans">
+            <h2>微信误删好友事件回顾</h2>
+
+  <p>每天有一亿人教张小龙做微信，今天轮到我来教了。<br><a target="_blank" rel="noopener" href="https://www.huxiu.com/article/280552.html">张小龙4个小时演讲全文：每天有1亿人教我做产品</a></p>
+<h2 id="好友管理就是一个迷"><a href="#好友管理就是一个迷" class="headerlink" title="好友管理就是一个迷"></a>好友管理就是一个迷</h2><p>个人对于微信好友管理复杂一直想吐槽很久了，趁着这个事情顺便整理下个人感觉混乱的逻辑</p>
+<p>首先从产品角度来说，我不明白为什么微信以<strong>通讯录</strong>作为好友列表的称呼；</p>
+<p>如果说微信是强调好友之间是弱关联的通讯方式，那为什么交流的时候前提是都在双方通讯录中？（防止骚扰？）</p>
+<p>按照我的猜想，通讯录的借鉴于早起电话簿的形式，即我方保留了对方的信息，当我需要沟通的时候，拨通电话即可，不需要得到对方的验证。</p>
+<p>所以，以通讯录为名，确执行着强关联的方式。</p>
+<h2 id="好友管理负担大"><a href="#好友管理负担大" class="headerlink" title="好友管理负担大"></a>好友管理负担大</h2><p>没有双向删除好友，这是一个比较奇怪的逻辑。按照以前qq好友删除的方式，只要一方删除了，双方即解除好友关系，同时消失在双方的列表中。（印象中：张小龙曾经解释过是为了规避法律的漏洞，极端情形下，比如被骗了，骗子删除好友后，无法保留记录等等）</p>
+<p>另外，有一部分人比较执着于好友关系正常与否，如果判断被对方拉黑还是删除，如何从朋友圈的显示情况判断是否被屏蔽，诸如此类的文章都被在数码圈都发烂了，这个过程简直比看论文还认真。</p>
+<h2 id="个人微信状况"><a href="#个人微信状况" class="headerlink" title="个人微信状况"></a>个人微信状况</h2><p>我的微信好友管理，一直就是无管理的状态，备注全名即可，别的没有了。因好友数量并不多，基本见名就能知道相关的交集和沟通的内容；</p>
+<p>鲜有-少有-罕有-稀有在电脑端操作微信的情况出现，登录的起因是刷到一个视频在吹电脑端微信的好友管理很高效，才知道电脑端的通讯录竟然有这种操作；于是乎我就点点点点。。。。直到 <strong>“悲剧”</strong> 的发生</p>
+<p>这次大部分被误删的是同事，外加一些朋友，有一个特点都是备注英文名或英文字母，排序在前，顺手select了大概20个。</p>
+<p>在随便打了个测试标签后，本想从该标签移出来，结果点击了删除，甚至没怎么细看提示，直接确认了。<strong>别问我为什么会犯这种低级错误，鼠标手快起来，三叉神经都得听我的。</strong>  连<strong>移除标签</strong>都没看见，不愧是阿拉德大陆的阿修罗（天帝哥，对唔x住～）</p>
+<p>补救的方法，从群聊中一个一个找出来。但还是miss了几个，因为并没有相同的群聊，但也尽可能的记下了；等后续找上门再挨个say sorry，不过人数不多，还好。可以想象得到的是对方会感到一阵膈应，愿谅解。</p>
+<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>微信的四大法宝</p>
+<ul>
+<li>朋友圈：锁死普通用户；很遗憾，我不是目标用户；<strong>I live in reality</strong></li>
+<li>公众号：拉拢创作者；我一般只关注政务、技术号，都是经过层层提纯的</li>
+<li>小程序：绑定开发者；被强制使用属实恶心，开发方面没接触</li>
+<li>视频号：挖别人墙脚的；无我无关，从来不看</li>
+</ul>
+<p>对于短视频，腾讯是真的不死心，势要分一杯羹；自己孵化的产品，上了多少款，还是打不过快手抖音。</p>
+<p>微信对于我而言，就是个沟通工具，即聊天的！</p>
+<p>微信是个“好”软件，巧就巧在，在我眼里它就是个软件，仅仅是个软件。</p>
+<p>最后，👴爷觉得QQ好用~ </p>
+<p> <img src="https://qn.heyunxiong.com/life/image-wechat-20230425-231501614.png" style="zoom:60%;" >   <img src="https://qn.heyunxiong.com/life/image-wechat-20230425-231510897.png" style="zoom:60%;" > 
+ </p>
+<!-- flag of hidden posts -->
+  <p><a class="classtest-link" href="/tags/untag/" rel="tag">untag</a> — Apr 25, 2023</p>
+  
+
+
+        </div>
+        <div class="row mt-2">
+  <h3>Search</h3>
+  <div><input id="search-text" title="search" class="search-text" type="text" placeholder="search......"></div>
+  <div style="margin-top: 1.5rem;">
+    <ul id="result"></ul>
+  </div>
+</div>
+        <div class="row mt-2">
+  
+    <div class="eight columns">
+      <p id="madewith">Made with ❤ and
+        <a class="footer-link icon" href="https://hexo.io" target="_blank" style="text-decoration: none;" rel="noreferrer" aria-label="Hexo.io">
+        <svg class="hexo svg-hov" width="14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Hexo.js</title><path d="M12 .007L1.57 6.056V18.05L12 23.995l10.43-6.049V5.952L12 .007zm4.798 17.105l-.939.521-.939-.521V12.94H9.08v4.172l-.94.521-.938-.521V6.89l.939-.521.939.521v4.172h5.84V6.89l.94-.521.938.521v10.222z"/></svg>
+        </a>
+        
+        at <a href="https://github.com/adisaktijrs/hexo-theme-minima" target="_blank" rel="noreferrer">Minima</a>.</p>
+        
+    </div>
+
+    <!-- Sepcial thanks to https://simpleicons.org/ for the icons -->
+    <div class="four columns mb-3 posisi" >
+      
+
+      
+
+      
+
+      
+
+      
+
+    </div>
+  
+</div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <script src="/js/nanobar.min.js"></script>
+
+  <script>
+    var options = {
+      classname: 'nanobar',
+      id: 'myNanobar'
+    };
+    var nanobar = new Nanobar(options);
+    nanobar.go(30);
+    nanobar.go(76);
+    nanobar.go(100);
+  </script>
+
+</body>
+
+</html>

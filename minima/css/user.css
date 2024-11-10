@@ -1,0 +1,22 @@
+body > div.container > div > div > div:nth-child(1) {
+    padding-bottom: 20px;
+    border-bottom: 3px dotted #0FA0CE;
+    margin-bottom: 20px;
+}
+
+body > div.container > div > div > div.row.mt-2 {
+    padding-top: 20px; 
+    border-top: 3px dotted #0FA0CE;
+}
+
+body > div.container > div > div > div:nth-child(3) {
+    display: none;
+}
+
+body > div.container > div > div > div:nth-child(1) > div.twelve.columns > hr {
+    display: none;
+}
+
+body > div.container > div > div > div.trans > h4 {
+    display: none;
+}
