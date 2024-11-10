@@ -1,7 +1,7 @@
 body > div.container > div > div > div:nth-child(1) {
     padding-bottom: 20px;
     border-bottom: 3px dotted #0FA0CE;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 body > div.container > div > div > div.row.mt-2 {
@@ -17,6 +17,12 @@ body > div.container > div > div > div:nth-child(1) > div.twelve.columns > hr {
     display: none;
 }
 
-body > div.container > div > div > div.trans > h4 {
+/* Hide All Posts */
+body > div.container > div > div > div.trans > h2 {
     display: none;
+}
+
+/* Set Layout Width */
+body > div.container {
+    max-width: 750px;
 }
