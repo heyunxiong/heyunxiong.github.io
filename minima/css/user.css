@@ -30,4 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body > div.container > div > div > div.trans{
     margin-top: 20px;
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
 }   
