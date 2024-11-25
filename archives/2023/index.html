@@ -149,6 +149,23 @@
       <div onclick=setDarkMode(true) id="darkBtn">🌗</div>
       <div onclick=setDarkMode(false) id="lightBtn" class=hidden>🌓</div>
       <script >
+        function checkAndSwitchMode() {
+          // 获取当前时间
+          const now = new Date();
+          // 计算今天晚上6点的时间
+          const tonightAtSix = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 18, 0);
+          // 如果当前时间大于或等于今天晚上6点，执行切换操作
+          if (now >= tonightAtSix) {
+            setDarkMode(false);
+          }else{
+            setDarkMode(true);
+          }
+        }
+        // 每分钟检查一次
+        setInterval(checkAndSwitchMode, 60000);
+        // 调用一次立即检查
+        checkAndSwitchMode();
+
         if (localStorage.getItem('preferredTheme') == 'dark') {
           setDarkMode(true)
         }
